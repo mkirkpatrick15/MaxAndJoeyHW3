@@ -35,8 +35,8 @@
 <nav>
     <div class="nav nav-tabs bg-dark text-white" id="nav-tab" role="tablist">
         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Schedule</a>
-        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Penalties</a>
+        <a class="nav-item nav-link" id="nav-schedule-tab" data-toggle="tab" href="#nav-schedule" role="tab" aria-controls="nav-schedule" aria-selected="false">Schedule</a>
+        <a class="nav-item nav-link" id="nav-penalty-tab" data-toggle="tab" href="#nav-penalty" role="tab" aria-controls="nav-penalty" aria-selected="false">Penalties</a>
         <a class="nav-item nav-link" id="nav-prize-tab" data-toggle="tab" href="#nav-prize" role="tab" aria-controls="nav-prize" aria-selected="false">Prize's</a>
         <a class="nav-item nav-link" id="nav-register-tab" data-toggle="tab" href="#nav-register" role="tab" aria-controls="nav-register" aria-selected="false">Registration</a>
     </div>
@@ -49,9 +49,10 @@
                 <h3 class="display-4">There can only be one.....</h3>
                 <div class="btn-group mt-2" role="group" aria-label="Basic example">
 
+
                     <a class="btn btn-primary btn-lg">Sign up</a>
 
-                    <a class="btn btn-secondary btn-lg" href="#rules">See rules</a>
+                    <a class="btn btn-secondary btn-lg" role="tabpanel" aria-labelledby="nav-penalty-tab">See rules</a>
 
                 </div>
             </div>
@@ -126,7 +127,7 @@
     </div>
 
 
-    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <div class="tab-pane fade" id="nav-schedule" role="tabpanel" aria-labelledby="nav-schedule-tab">
         <!--schedule -->
         <div class="container pt-5">
         <h1 class="display-4 text-center my-3 text-muted">Schedule</h1>
@@ -187,7 +188,7 @@
     </div>
 
 
-    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+    <div class="tab-pane fade" id="nav-penalty" role="tabpanel" aria-labelledby="nav-penalty-tab">
         <!-- penalty area -->
         <div class="container pt-5">
         <div class="col-sm">
