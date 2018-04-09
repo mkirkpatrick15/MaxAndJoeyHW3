@@ -45,18 +45,13 @@
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
         <div class="jumbotron jumbotron-fluid bg-primary text-white">
             <div class="container text-sm-center pt-5">
-                
                 <h1 class="display-1">FIFA MJ Tournament 2018</h1>
                 <h3 class="display-4">There can only be one.....</h3>
-
-                <div class="btn-group mt-2" role="group" aria-label="Basic example">
-                    <a class="btn btn-primary btn-lg">Sign up</a>
-                    <a class="btn btn-secondary btn-lg" href="#rules">See rules</a>
-                </div>
             </div>
         </div>
         <div class="container pt-5">
         <!-- about -->
+            
         <div class="row">
             <div class="col-sm">
 
@@ -363,5 +358,28 @@
 
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+
+    // Javascript to enable link to tab
+
+    var hash = document.location.hash;
+
+    var prefix = "tab_";
+
+    if (hash) {
+
+            $('.nav-tabs a[href=' + hash.replace(prefix, "") + ']').tab('show');
+
+    }
+
+    // Change hash for page-reload
+
+    $('.nav-tabs a').on('shown', function(e) {
+
+            window.location.hash = e.target.hash.replace("#", "#" + prefix);
+
+    });
+
+</script>
 </body>
 </html>
