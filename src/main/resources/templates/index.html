@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="en">
+<html layout:decorator="layout/layout" lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.w3.org/1999/xhtml">
 <head>
     <title>FIFA 18 Tourney</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 
 
     <meta charset="utf-8">
@@ -57,7 +57,7 @@
 
                 <h3 class="mt-5 mb-4 ">FIFA 18</h3>
 
-                <img class="mb-1 rounded img-fluid" src="Images/FifaLogo.jpg" alt="FifaLogo">
+                <img class="mb-1 rounded img-fluid" th:src="@{/static/FifaLogo.jpg}" alt="FifaLogo" />
 
                 <p>Are you ready to become the CHAMPION of FIFA! Now is your time to SHINE!</p>
 
