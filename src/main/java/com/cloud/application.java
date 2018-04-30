@@ -1,5 +1,7 @@
 package com.cloud;
 
+import com.cloud.model.Attendee;
+import com.cloud.repository.AttendeeRepository;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
