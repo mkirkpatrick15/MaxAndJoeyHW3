@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -23,15 +23,15 @@
   }
   </style>
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-    <link href='custom.css' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css' />
+    <link href='custom.css' rel='stylesheet' type='text/css' />
 
 
 
 </head>
 <body>
-
+<th:block layout:fragment="content">
 <nav>
     <div class="nav nav-tabs bg-dark text-white" id="nav-tab" role="tablist">
         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
@@ -57,7 +57,7 @@
 
                 <h3 class="mt-5 mb-4 ">FIFA 18</h3>
 
-                <img class="mb-1 rounded img-fluid" th:src="@{/static/FifaLogo.jpg}" alt="FifaLogo" />
+                <img class="mb-1 rounded img-fluid" th:src="@{static/FifaLogo.jpg}" alt="FifaLogo" />
 
                 <p>Are you ready to become the CHAMPION of FIFA! Now is your time to SHINE!</p>
 
@@ -100,7 +100,7 @@
         <h1 id="speakers" class="text-center my-3 text-muted">Choose Your Team!!</h1>
         <div class="row">
             <div class="card text-center mx-auto" style="width: 50rem;">
-                <img class="card-img-left  rounded mx-auto d-block image-fluid"  style="width:100%" src="Images/PremierLeague.jpg" alt="Card image cap">
+                <img class="card-img-left  rounded mx-auto d-block image-fluid"  style="width:100%" th:src="@{/PremierLeague.jpg}" alt="Card image cap"/>
                 <div class="card-body">
                     <p class="card-text">For the first round, players will be given a specified league to select teams from (i.e. Premiere League, Bundesliga, etc.).
                         The player is given 3 randoms, and then the option to choose a suicide random. This means the player will generate 3 random teams and pick from the 3,
@@ -108,7 +108,7 @@
                 </div>
             </div>
             <div class="card mx-auto text-center" style="width: 50rem;">
-                <img class="card-img-left rounded mx-auto d-block image-fluid" style="width:100%" src="Images/Manchester-United-vs-Manchester-City-Derby.jpg" alt="Card image cap">
+                <img class="card-img-left rounded mx-auto d-block image-fluid" style="width:100%" th:src="@{/Manchester-United-vs-Manchester-City-Derby.jpg}" alt="Card image cap"/>
                 <div class="card-body">
                     <p class="card-text">For the final round, the players will be given the option to choose whatever team they want. The player with the highest goal differential through the
                         first 5 rounds will be given the opportunity to pick their team first. For the final round the teams can not be the same..</p>
@@ -240,8 +240,8 @@
     <div class="tab-pane fade " id="nav-prize" role="tabpanel" aria-labelledby="nav-prize-tab">
 
         <div class="container">.
-            <br>
-            <h1 class="display-4 text-center my-3 text-muted">1st, 2nd & 3rd Prizes</h1>
+
+            <h1 class="display-4 text-center my-3 text-muted">1st, 2nd and 3rd Prizes</h1>
 
             <div id="demo" class="carousel slide" data-ride="carousel">
                 <!-- Indicators -->
@@ -255,21 +255,21 @@
                 <div class="carousel-inner" role="listbox">
 
                     <div class="carousel-item active">
-                        <p style="text-align:center;"><img src="Images/First.jpg" alt="First Place" style="width: auto; height: auto;" ></p>
+                        <p style="text-align:center;"><img th:src="@{/First.jpg}" alt="First Place" style="width: auto; height: auto;" /></p>
                         <h1 style="color:#42e2f4; text-align:center">1st Place Prize</h1>
                         <h3 style="color:#42e2f4; text-align:center">Alienware R3 15 laptop, Baby Pembroke Welsh Corgi and a Golden 1st place MJ Tournament Trophy</h3>
                     </div>
 
 
                     <div class="carousel-item">
-                        <p style="text-align:center;"><img src="Images/Second.jpg" alt="Second Place" style="width: auto; height: auto;" align="middle"></p>
+                        <p style="text-align:center;"><img th:src="@{/Second.jpg}" alt="Second Place" style="width: auto; height: auto;" align="middle"/></p>
                             <h1 style="color:#42e2f4; text-align:center">2nd Place Prize</h1>
                             <h3 style="color:#42e2f4; text-align:center">Top of the line 65 inch Samsung QLED Smart TV</h3>
                     </div>
 
 
                     <div class="carousel-item">
-                        <p style="text-align:center;"><img src="Images/Third.jpg" alt="Third Place" style="width: auto; height: auto;" align="middle"></p>
+                        <p style="text-align:center;"><img th:src="@{/Third.jpg}" alt="Third Place" style="width: auto; height: auto;" align="middle"/></p>
                             <h1 style="color:#42e2f4; text-align:center">3rd Place Prize</h1>
                             <h3 style="color:#42e2f4; text-align:center">Brand New iPhone X 256GB with the option to pick between black or silver color</h3>
                     </div>
@@ -296,23 +296,23 @@
         <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5">Like to play FIFA??? Register Now!</button>
 
         <!-- signup form -->
-        <hr>
+
         <div class="row py-4 text-muted">
             <div class="col-md-6">
                 <p><strong>About MJ Tournaments</strong></p>
-                <p>MJ (Maxwell & Joseph) Tournaments was created to bring all gamers together to meet new people and make friends. It's all about the people you know! Work Hard but PLAY HARDER!!!</p>
+                <p>MJ (Maxwell and Joseph) Tournaments was created to bring all gamers together to meet new people and make friends. It's all about the people you know! Work Hard but PLAY HARDER!!!</p>
             </div>
             <div class="col-md-6">
                 <p><strong>Stay up-to-date on MJ's upcoming Tournaments</strong></p>
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Email">
+                    <input type="text" class="form-control" placeholder="Email" />
                     <span class="input-group-btn">
         <button class="btn btn-info" type="button">Sign up</button>
       </span>
                 </div>
             </div>
         </div>
-        <hr><!-- /signup form -->
+        <!-- /signup form -->
 
         <!-- footer -->
         <div class="row py-3">
@@ -381,5 +381,6 @@
     });
 
 </script>
+</th:block>
 </body>
 </html>
