@@ -57,7 +57,7 @@
 
                 <h3 class="mt-5 mb-4 ">FIFA 18</h3>
 
-                <img class="mb-1 rounded img-fluid" th:src="@{static/FifaLogo.jpg}" alt="FifaLogo" />
+                <img class="mb-1 rounded img-fluid" th:src="@{/FifaLogo.jpg}" alt="FifaLogo" />
 
                 <p>Are you ready to become the CHAMPION of FIFA! Now is your time to SHINE!</p>
 
@@ -296,7 +296,7 @@
         <button type="button" class="btn btn-outline-info btn-lg d-block mx-auto my-5">Like to play FIFA??? Register Now!</button>
 
         <!-- signup form -->
-
+        <form th:action="@{/register}" th:object="${attendee}" method="post">
         <div class="row py-4 text-muted">
             <div class="col-md-6">
                 <p><strong>About MJ Tournaments</strong></p>
@@ -305,13 +305,14 @@
             <div class="col-md-6">
                 <p><strong>Stay up-to-date on MJ's upcoming Tournaments</strong></p>
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Email" />
+                    <input id="register" type="text" th:field="*{email}" class="form-control" placeholder="Email" />
                     <span class="input-group-btn">
-        <button class="btn btn-info" type="button">Sign up</button>
+        <button class="btn btn-info" type="submit" value="submit">Sign up</button>
       </span>
                 </div>
             </div>
         </div>
+        </form>
         <!-- /signup form -->
 
         <!-- footer -->
