@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 import java.util.stream.Collectors;
 
 @Controller
@@ -24,10 +26,10 @@ public class RegistrationController {
     }
 
     @RequestMapping(value="/register", method=RequestMethod.POST)
-    @ResponseBody
-    public String register(@ModelAttribute Attendee attendee){
+    public String register(@ModelAttribute Attendee attendee, RedirectAttributes redirectAttributes){
         attendeeRepository.addAttendee(attendee);
-        return attendeeRepository.allAttendeesAsString();
+        redirectAttributes.addFlashAttribute("attendees", attendeeRepository.findall());
+        return "redirect:/";
     }
 
 }

@@ -49,6 +49,26 @@
                 <h3 class="display-4">There can only be one.....</h3>
             </div>
         </div>
+        <div th:fragment="flash" th:if="${attendees !=null}" class="alert alert-danger alert-dismissible" role="alert">
+
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Email</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="attendee: ${attendees}">
+
+                        <td th:text="${attendee.getEmail()}">Email</td>
+
+                    </tr>
+                    </tbody>
+                </table>
+            </button>
+        </div>
         <div class="container pt-5">
         <!-- about -->
             
