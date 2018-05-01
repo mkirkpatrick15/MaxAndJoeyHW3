@@ -23,4 +23,5 @@ public class RegistrationService {
         return attendeeRepository.findAll();
     }
 
+    
 }
