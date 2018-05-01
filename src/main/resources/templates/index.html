@@ -32,15 +32,8 @@
 </head>
 <body>
 <th:block layout:fragment="content">
-<nav>
-    <div class="nav nav-tabs bg-dark text-white" id="nav-tab" role="tablist">
-        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-        <a class="nav-item nav-link" id="nav-schedule-tab" data-toggle="tab" href="#nav-schedule" role="tab" aria-controls="nav-schedule" aria-selected="false">Schedule</a>
-        <a class="nav-item nav-link" id="nav-penalty-tab" data-toggle="tab" href="#nav-penalty" role="tab" aria-controls="nav-penalty" aria-selected="false">Penalties</a>
-        <a class="nav-item nav-link" id="nav-prize-tab" data-toggle="tab" href="#nav-prize" role="tab" aria-controls="nav-prize" aria-selected="false">Prize's</a>
-        <a class="nav-item nav-link" id="nav-register-tab" data-toggle="tab" href="#nav-register" role="tab" aria-controls="nav-register" aria-selected="false">Registration</a>
-    </div>
-</nav>
+
+
 <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
         <div class="jumbotron jumbotron-fluid bg-primary text-white">
@@ -49,10 +42,8 @@
                 <h3 class="display-4">There can only be one.....</h3>
             </div>
         </div>
-        <div th:fragment="flash" th:if="${attendees !=null}" class="alert alert-danger alert-dismissible" role="alert">
-
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
+        <div th:fragment="flash" th:if="${attendees !=null}" class="alert alert-danger text-center">
+            <a href="#" class ="close" data-dismiss="alert" arial-label="close" >&times;</a>
                 <table class="table table-striped">
                     <thead>
                     <tr>
@@ -61,15 +52,13 @@
                     </thead>
                     <tbody>
                     <tr th:each="attendee: ${attendees}">
-
                         <td th:text="${attendee.getEmail()}">Email</td>
-
                     </tr>
                     </tbody>
                 </table>
-            </button>
         </div>
         <div class="container pt-5">
+
         <!-- about -->
             
         <div class="row">
